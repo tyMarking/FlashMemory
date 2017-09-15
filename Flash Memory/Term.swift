@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Term: NSObject {
+class Term: NSObject, NSCoding {
     var name: String = ""
     var deffinition: String = ""
     
@@ -29,6 +29,31 @@ class Term: NSObject {
     }
     public func setDeff(deff: String) {
         self.deffinition = deff
+    }
+    
+    
+    func encode(with aCoder: NSCoder) {
+        print("Term Ecoding")
+        aCoder.encode(name, forKey: Keys.Name)
+        print("Term Encoded name")
+        aCoder.encode(deffinition, forKey: Keys.Deff)
+        print("Term Encoded all")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        if let nameObj = aDecoder.decodeObject(forKey: Keys.Name) as? String {
+            name = nameObj
+        }
+        if let descObj = aDecoder.decodeObject(forKey: Keys.Deff) as? String {
+            deffinition = descObj
+        }
+    }
+
+    
+    //MARK: Types
+    struct Keys {
+        static let Name = "name"
+        static let Deff = "deff"
     }
     
 }

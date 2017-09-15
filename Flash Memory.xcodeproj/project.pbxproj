@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		498CE3941F69A32000CA6FEA /* CardSetStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498CE3931F69A32000CA6FEA /* CardSetStore.swift */; };
+		499ED2911F6C4552001B1D25 /* CardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499ED2901F6C4552001B1D25 /* CardSet.swift */; };
 		49B4AF951F5C671500102A34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B4AF941F5C671500102A34 /* AppDelegate.swift */; };
 		49B4AF971F5C671500102A34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B4AF961F5C671500102A34 /* ViewController.swift */; };
 		49B4AF9A1F5C671500102A34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B4AF981F5C671500102A34 /* Main.storyboard */; };
 		49B4AF9C1F5C671500102A34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49B4AF9B1F5C671500102A34 /* Assets.xcassets */; };
 		49B4AF9F1F5C671500102A34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49B4AF9D1F5C671500102A34 /* LaunchScreen.storyboard */; };
 		49B4AFA71F5C73A300102A34 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B4AFA61F5C73A300102A34 /* InfoViewController.swift */; };
-		49B4AFA91F5C759C00102A34 /* CardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B4AFA81F5C759C00102A34 /* CardSet.swift */; };
 		49B4AFAB1F5C75A700102A34 /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B4AFAA1F5C75A700102A34 /* Term.swift */; };
 		49B4AFAD1F5C7A1800102A34 /* NewSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B4AFAC1F5C7A1800102A34 /* NewSetViewController.swift */; };
 		49B4AFAF1F5C897200102A34 /* SetEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B4AFAE1F5C897200102A34 /* SetEditorViewController.swift */; };
@@ -23,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		498CE3931F69A32000CA6FEA /* CardSetStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSetStore.swift; sourceTree = "<group>"; };
+		499ED2901F6C4552001B1D25 /* CardSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardSet.swift; path = ../CardSet.swift; sourceTree = "<group>"; };
 		49B4AF911F5C671500102A34 /* Flash Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flash Memory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B4AF941F5C671500102A34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49B4AF961F5C671500102A34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +32,6 @@
 		49B4AF9E1F5C671500102A34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49B4AFA01F5C671500102A34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49B4AFA61F5C73A300102A34 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		49B4AFA81F5C759C00102A34 /* CardSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSet.swift; sourceTree = "<group>"; };
 		49B4AFAA1F5C75A700102A34 /* Term.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Term.swift; sourceTree = "<group>"; };
 		49B4AFAC1F5C7A1800102A34 /* NewSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSetViewController.swift; sourceTree = "<group>"; };
 		49B4AFAE1F5C897200102A34 /* SetEditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetEditorViewController.swift; sourceTree = "<group>"; };
@@ -68,13 +68,13 @@
 		49B4AF931F5C671500102A34 /* Flash Memory */ = {
 			isa = PBXGroup;
 			children = (
+				499ED2901F6C4552001B1D25 /* CardSet.swift */,
 				49B4AF941F5C671500102A34 /* AppDelegate.swift */,
 				49B4AF961F5C671500102A34 /* ViewController.swift */,
 				49B4AF981F5C671500102A34 /* Main.storyboard */,
 				49B4AFB01F5CDDA100102A34 /* TermCellSplit.swift */,
 				49B4AFAE1F5C897200102A34 /* SetEditorViewController.swift */,
 				49B4AFAC1F5C7A1800102A34 /* NewSetViewController.swift */,
-				49B4AFA81F5C759C00102A34 /* CardSet.swift */,
 				498CE3931F69A32000CA6FEA /* CardSetStore.swift */,
 				49B4AFAA1F5C75A700102A34 /* Term.swift */,
 				49B4AFA61F5C73A300102A34 /* InfoViewController.swift */,
@@ -164,8 +164,8 @@
 				49B4AFA71F5C73A300102A34 /* InfoViewController.swift in Sources */,
 				49B4AFAD1F5C7A1800102A34 /* NewSetViewController.swift in Sources */,
 				49B4AFAB1F5C75A700102A34 /* Term.swift in Sources */,
-				49B4AFA91F5C759C00102A34 /* CardSet.swift in Sources */,
 				49B4AF951F5C671500102A34 /* AppDelegate.swift in Sources */,
+				499ED2911F6C4552001B1D25 /* CardSet.swift in Sources */,
 				498CE3941F69A32000CA6FEA /* CardSetStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
