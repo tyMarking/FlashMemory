@@ -11,13 +11,14 @@ import UIKit
 var sets: [CardSet] = []
 var myIndex = 0
 var launched = false
+let date = Date()
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
     @IBOutlet weak var tableView: UITableView!
     
-    var filePath: String {
+    class var filePath: String {
         let manager = FileManager.default
         let url = manager.urls(for: .documentDirectory, in: .userDomainMask).first
         return url!.appendingPathComponent("Data").path
@@ -45,6 +46,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
         print("The index is: \(myIndex)")
+        sets[myIndex].checkDate()
         performSegue(withIdentifier: "segueToInfo", sender: self)
     }
     
@@ -54,12 +56,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let toController = segueToInfo.destination as! InfoViewController
             toController.cardSet = sets[myIndex]
         }
-        saveData()
+        ViewController.saveData()
         print("SO IT IS")
 
     }
     
-    private func saveData() {
+    class func saveData() {
         print("len of sets: \(sets.count)")
         NSKeyedArchiver.archiveRootObject(sets, toFile: filePath)
     }
@@ -70,7 +72,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }*/
     
     private func loadData() {
-        if let inData = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? [CardSet] {
+        if let inData = NSKeyedUnarchiver.unarchiveObject(withFile: ViewController.filePath) as? [CardSet] {
             sets = inData
         }
     }
@@ -86,8 +88,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             launched = true
         }
         print("Will save Data")
-        saveData()
+        ViewController.saveData()
         print("Saved Data")
+        print("Date: \(date)")
+        
         tableView.reloadData()
     }
     

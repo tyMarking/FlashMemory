@@ -31,6 +31,7 @@ class NewSetViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        ViewController.saveData()
 
         // Do any additional setup after loading the view.
     }
@@ -41,6 +42,8 @@ class NewSetViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        ViewController.saveData()
+
         //UserDefaults.standard.set(data, forKey: "sets")
         print("IT has prepared")
     }

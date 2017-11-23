@@ -9,6 +9,8 @@
 import UIKit
 
 class SetEditorViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var descField: UITextField!
     var cardSet = CardSet(name: "nil")
     var cells: [TermCellSplit] = []
     @IBOutlet weak var termTable: UITableView!
@@ -44,6 +46,8 @@ class SetEditorViewController: UIViewController, UITableViewDataSource, UITableV
         cardSet.addTerm(term: blankTerm)
         //cells.append(termCell)
         termTable.reloadData()
+        ViewController.saveData()
+
     }
     
     func scrollToBottom(){
@@ -56,6 +60,8 @@ class SetEditorViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        ViewController.saveData()
+
         //update card set
         /*if (cardSet.getTerms().count > cells.count) {
             for i in cells.count+1 ... cardSet.getTerms().count {
@@ -79,6 +85,14 @@ class SetEditorViewController: UIViewController, UITableViewDataSource, UITableV
             toController.cardSet = cardSet
 
         }
+        if nameField.text! != "" {
+           cardSet.setName(name: nameField.text!)
+        }
+        if descField.text! != "" {
+            cardSet.setDesc(desc: descField.text!)
+        }
+        
+        
     }
     
     public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -99,6 +113,14 @@ class SetEditorViewController: UIViewController, UITableViewDataSource, UITableV
             termCell.deff.delegate = self
             termCell.name.delegate = self
         }
+        print("LOOK AT ME")
+        print(cardSet.getName())
+        nameField.text = cardSet.getName()
+        descField.text = cardSet.getDesc()
+        nameField.delegate = self
+        descField.delegate = self
+        ViewController.saveData()
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

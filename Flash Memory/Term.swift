@@ -33,11 +33,8 @@ class Term: NSObject, NSCoding {
     
     
     func encode(with aCoder: NSCoder) {
-        print("Term Ecoding")
         aCoder.encode(name, forKey: Keys.Name)
-        print("Term Encoded name")
         aCoder.encode(deffinition, forKey: Keys.Deff)
-        print("Term Encoded all")
     }
     
     required init?(coder aDecoder: NSCoder) {
